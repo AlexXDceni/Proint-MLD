@@ -18,7 +18,6 @@ Proint-MLD is a high-performance web platform designed to integrate complex data
 
 * **Frontend:** HTML5, CSS3 (Flexbox/Grid), and JavaScript (ES6+).
 * **Version Control:** Git & GitHub.
-* **Environment:** Node.js (Development Environment).
 
 ---
 
@@ -26,9 +25,9 @@ Proint-MLD is a high-performance web platform designed to integrate complex data
 
 ```text
 Proint-MLD/
-├── assets/             # Images, icons, and static media
-├── css/                # Stylesheets and UI components
-├── js/                 # Core logic and module scripts
+├── images/             # Images, icons, and static media
+├── style.css           # Stylesheets and UI components
+├── script.js           # Core logic and module scripts
 ├── index.html          # Primary entry point
 ├── README.md           # Project documentation
 └── .gitignore          # Files excluded from version control
