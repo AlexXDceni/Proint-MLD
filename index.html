@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang = "en" style="scroll-behavior: smooth;">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">  -->
+    <link rel="icon" type="image/png" href="/images/AlexXDceni.png"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-dark text-white">
+    
+    
+    <main >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm  bg-opacity-75  backdrop-blur"> 
+            <div class="container">
+                
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#hero">
+                    <img src="images/logo.svg" alt="Proint MLD" height="34">
+                    <span>Proint MLD</span>
+                </a>
+                
+                <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="themeButton">Theme</button>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        </nav> 
+        
+        <hero class="d-flex align-items-center justify-content-center text-center text-white   position-relative vh-100" id="hero">
+            <video autoplay muted loop class="vh-100 w-100 object-fit-cover">
+                <source src="images/minecraft-relaxing-fireplace.3840x2160.mp4" type="video/mp4">
+            </video >
+            
+            <section class="card bg-opacity-50 backdrop-blur bg-dark text-white p-4 position-absolute top-50 start-50 translate-middle animate-on-scroll"">
+                <h2 class="lead fw-bold display-4">Professional Training & Web Development Consulting</h2>
+                <p class="lead">
+                    We help students and teams learn modern web development
+                    through practical, project-based training.
+                </p>
+                <a class="btn btn-primary" href="#services" >Explore Our Services</a>
+            </section>
+        </hero>
+        
+        <section class="container my-5 bg-light bg-opacity-75 text-dark p-4 rounded animate-on-scroll"  id="about">
+            <h2 class="lead fw-bold display-5 text-center mb-4" >About Proint MLD</h2>
+            
+            <p class="lead mb-4 text-center lh-lg fw-normal">   
+                Proint MLD is a fictional company focused on professional training
+        and web development consulting.
+        </p>
+        <p class="lead mb-4 text-center lh-lg  fw-normal">
+        Our mission is to teach practical digital skills with real projects.
+    </p>
+    
+</section>
+
+<section class="container my-5 bg-light bg-opacity-75 text-dark p-4 rounded animate-on-scroll" id="services">
+    <h2 class="lead fw-bold display-5 text-center mb-4" >Our Services</h2>
+    
+    <article class="mb-4 card bg-light bg-opacity-50 p-3 rounded shadow-sm">
+        <h3 class="ms-3">Web Development</h3>
+        <p class=" fw-normal ms-2">Custom websites and landing pages for businesses.</p>
+    </article>
+    
+    <article class="mb-4 card bg-light bg-opacity-50 p-3 rounded shadow-sm">
+        <h3 class="ms-3">Consulting</h3>
+        <p class="fw-normal ms-2">Technical guidance on architecture, UX, and performance.</p>
+    </article>
+    
+    <article class="mb-4 card bg-light bg-opacity-50 p-3 rounded shadow-sm">
+        <h3 class="ms-3">Training</h3>
+        <p class="fw-normal ms-2">Hands-on workshops for students and teams.</p>
+    </article>
+</section>    
+
+<section class="container my-5 bg-light bg-opacity-75 text-dark p-4 rounded animate-on-scroll" id="team">
+    <h2 class="lead fw-bold display-5 text-center mb-4" >Our Team</h2>
+
+    <article class="mb-4 card bg-light bg-opacity-50 p-4 rounded shadow-sm text-center w-50 mx-auto">
+        <img src="images/AlexXDceni.png" alt="Cenariu Alexandru" class="rounded-circle mb-3 mx-auto d-block" width="120" height="120">
+        <h3 class="ms-3">Cenariu Alexandru</h3>
+        <p class=" fw-normal ms-2">Head web designer and developer.</p>
+    </article>
+    
+    <content class=" d-flex gap-4 flex-wrap justify-content-center">
+        
+        
+        <article class="mb-4 card bg-light bg-opacity-50 p-4 rounded shadow-sm text-center" style="width: 250px;">
+            <h3 class="ms-3">Tudor Stanca</h3>
+            <p class="fw-normal ms-2">Senior web developer and project manager.</p>
+        </article>
+        
+        <article class="mb-4 card bg-light bg-opacity-50 p-4 rounded shadow-sm text-center" style="width: 250px;">
+            <h3 class="ms-3">Denis Birtalan</h3>
+            <p class="fw-normal ms-2">Frontend developer and UI/UX designer.</p>
+        </article>
+        
+        <article class="mb-4 card bg-light bg-opacity-50 p-4 rounded shadow-sm text-center" style="width: 250px;">
+            <h3 class="ms-3">Nechitescu Mihai</h3>
+            <p class="fw-normal ms-2">Backend developer and database administrator.</p>
+        </article>
+        
+        <article class="mb-4 card bg-light bg-opacity-50 p-4 rounded shadow-sm text-center" style="width: 250px;">
+            <h3 class="ms-3">Tomita Alecsia</h3>
+            <p class="fw-normal ms-2">Tomix, a talented graphic designer.</p>
+        </article> 
+    </content>
+        
+</section>    
+
+<section id="contact" class="container my-5 bg-light bg-opacity-75 text-dark p-4 rounded animate-on-scroll">
+    <h2 class="lead fw-bold display-5 text-center mb-4">Contact Us</h2>
+    <form action="#" method="POST" class="d-flex flex-column gap-3">
+        <label for="name" class="lead fw-semibold ms-2">Name</label>
+        <input id="name" placeholder="Your Name" class="form-control shadow-sm" name="name" type="text" required>
+        
+        <label for="email" class="lead fw-semibold ms-2">Email</label>
+        <input id="email" placeholder="Your Email" class="form-control shadow-sm" name="email" type="email" required>
+        
+        <label for="message" class="lead fw-semibold ms-2">Message</label>
+        <textarea id="message" placeholder="Your Message" class="form-control shadow-sm" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn btn-primary shadow-sm">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2026 Proint MLD. All rights reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<div id="scroll-progress"></div>
+</html>

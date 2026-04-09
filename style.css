@@ -1,0 +1,442 @@
+/* Import font modern - Inter (standardul iOS) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --glass-blur: 24px;
+    --accent-color: #007aff; /* iOS Blue */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Stiluri de Bază --- */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+}
+
+/* --- Navigație Glassmorphism --- */
+.navbar {
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- Hero Section (iOS 26 Style) --- */
+hero {
+    display: block;
+    position: relative;
+    height: 100vh;
+}
+
+hero video {
+    filter: brightness(0.7); /* Face textul alb să "sară" în evidență */
+}
+
+hero .card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(var(--glass-blur)) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 28px;
+    padding: 3.5rem !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-width: 850px;
+}
+
+/* Textul din Hero rămâne MEREU alb pentru lizibilitate peste video */
+hero h2, hero p, hero .lead {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* --- Secțiuni și Containere --- */
+section.container {
+    border-radius: 24px;
+    padding: 3rem !important;
+    transition: var(--transition-smooth);
+    margin-bottom: 3rem !important;
+}
+
+/* --- TEMA ÎNTUNECATĂ (Fix Vizibilitate) --- */
+body.bg-dark {
+    background-color: #0f172a !important; /* Slate 900 */
+    color: #f1f5f9 !important;
+}
+
+body.bg-dark section.container {
+    background-color: rgba(30, 41, 59, 0.7) !important; /* Slate 800 transparent */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #f1f5f9 !important;
+}
+
+body.bg-dark h2, 
+body.bg-dark h3, 
+body.bg-dark p, 
+body.bg-dark label {
+    color: #f1f5f9 !important;
+}
+
+body.bg-dark article.card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- TEMA LUMINOASĂ (Fix Vizibilitate) --- */
+body.bg-light {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+body.bg-light section.container {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    color: #0f172a !important;
+}
+
+body.bg-light h2, 
+body.bg-light h3, 
+body.bg-light p, 
+body.bg-light label {
+    color: #0f172a !important;
+}
+
+/* --- Cardurile (Servicii & Echipă) --- */
+article.card {
+    border: none !important;
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: var(--transition-smooth) !important;
+}
+
+article:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+    background: rgba(255, 255, 255, 1) !important;
+}
+
+body.bg-dark article:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* --- Formular & Butoane --- */
+.form-control {
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: var(--transition-smooth);
+}
+
+body.bg-dark .form-control {
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    background-color: #005ecb;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.3);
+}
+
+/* --- Animații Scroll --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(10px); /* Elementul începe neclar */
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0); /* Devine clar când e vizibil */
+}
+
+.animate-on-scroll h2, .animate-on-scroll p {
+    filter: blur(8px);
+    transition: filter 1s ease, transform 1s ease;
+}
+
+.animate-on-scroll.visible h2, .animate-on-scroll.visible p {
+    filter: blur(0);
+}
+
+
+/* Imagini Echipă */
+.rounded-circle {
+    border: 3px solid var(--accent-color);
+    padding: 3px;
+    background: white;
+}
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--accent-color);
+    z-index: 2000;
+}
+
+.cursor-dot {
+    width: 8px; height: 8px; background: var(--accent-color);
+    position: fixed; pointer-events: none; border-radius: 50%; z-index: 9999;
+}
+.cursor-outline {
+    width: 30px; height: 30px; border: 2px solid var(--accent-color);
+    position: fixed; pointer-events: none; border-radius: 50%; z-index: 9998;
+    transition: transform 0.15s ease-out;
+}
+
+#team content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+body.bg-dark article.card:hover {
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.4) !important;
+    border-color: var(--accent-color) !important;
+}
+
+ .display-5 {
+    background: linear-gradient(90deg, #ffffff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.bg-light .display-5 {
+    background: linear-gradient(90deg, #0f172a, #334155);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Ascuns default */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+
+section {
+    scroll-margin-top: 80px; /* Lasă loc pentru navbar */
+}
+
+body.bg-dark {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+body.bg-light {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+}
+
+.btn-primary:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.rounded-circle {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
+    filter: grayscale(40%); /* Aspect artistic */
+}
+
+article.card:hover .rounded-circle {
+    transform: scale(1.1) rotate(3deg);
+    filter: grayscale(0%); /* Revine la culori normale la hover */
+    border-color: var(--accent-color);
+}
+
+.form-control:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.1) !important;
+}
+
+
+.btn-primary, #themeButton {
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    display: inline-block;
+}
+
+article.card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lumina de fundal care va fi mutată prin JS */
+.card-spotlight {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(600px circle at var(--x) var(--y), rgba(255,255,255,0.1), transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+section.container {
+    position: relative;
+    border: 1px solid transparent !important;
+    background-clip: padding-box; /* Protejează fundalul de bordura transparentă */
+}
+
+section.container::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: -1px; right: -1px; bottom: -1px;
+    z-index: -1;
+    border-radius: 24px; /* Aceeași cu containerul */
+    padding: 1px; /* Grosimea bordurii */
+    background: linear-gradient(135deg, rgba(255,255,255,0.4), transparent, rgba(255,255,255,0.1));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+
+/* --- Stil pentru Butonul Magnetic (Efect de revenire lina) --- */
+.btn-primary, #themeButton {
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Tranzitie mai lunga pentru senzatia de greutate */
+}
+
+
+
+
+
+
+
+:root {
+    --soft-bg: #f0f2f5; 
+    --soft-text: #3c4043; 
+    --soft-shadow-dark: rgba(0, 0, 0, 0.04); 
+    --soft-shadow-light: rgba(255, 255, 255, 0.9);
+}
+
+body.bg-light {
+    background-color: var(--soft-bg) !important;
+    color: var(--soft-text) !important;
+    background-image: none !important; 
+}
+
+body.bg-light section.container {
+    background-color: var(--soft-bg) !important; 
+    border: none !important;
+    border-radius: 30px;
+    box-shadow: 
+        10px 10px 20px var(--soft-shadow-dark),
+        -10px -10px 20px var(--soft-shadow-light),
+        inset 4px 4px 8px var(--soft-shadow-light) !important;
+    backdrop-filter: none !important; 
+    padding: 4rem !important; 
+}
+
+body.bg-light h2, 
+body.bg-light h3 {
+    color: var(--soft-text) !important;
+    letter-spacing: -0.01em;
+}
+
+body.bg-light .display-5 {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: var(--soft-text) !important;
+}
+
+body.bg-light article.card {
+    background-color: var(--soft-bg) !important;
+    border: none !important;
+    border-radius: 20px;
+    box-shadow: 
+        inset 5px 5px 10px var(--soft-shadow-dark),
+        inset -5px -5px 10px var(--soft-shadow-light) !important;
+}
+
+body.bg-light article:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 
+        10px 10px 20px var(--soft-shadow-dark),
+        -10px -10px 20px var(--soft-shadow-light) !important;
+}
+
+body.bg-light .form-control {
+    background-color: var(--soft-bg) !important;
+    border: none !important;
+    color: var(--soft-text) !important;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    box-shadow: 
+        inset 3px 3px 6px var(--soft-shadow-dark),
+        inset -3px -3px 6px var(--soft-shadow-light) !important;
+    transition: all 0.3s ease;
+}
+
+body.bg-light .form-control:focus {
+    box-shadow: 
+        inset 2px 2px 4px var(--soft-shadow-dark),
+        inset -2px -2px 4px var(--soft-shadow-light),
+        0 0 10px rgba(0, 122, 255, 0.1) !important;
+}
+
+body.bg-light .btn-primary {
+    background-color: #007aff !important; 
+    color: white !important;
+    border-radius: 15px;
+    border: none !important;
+    box-shadow: 
+        5px 5px 10px rgba(0, 122, 255, 0.2),
+        -5px -5px 10px rgba(255, 255, 255, 0.5) !important;
+}
+
+body.bg-light .btn-primary:hover {
+    background-color: #0062cc !important;
+    transform: scale(1.02) translateY(-2px) !important;
+    box-shadow: 
+        8px 8px 15px rgba(0, 122, 255, 0.3),
+        -8px -8px 15px rgba(255, 255, 255, 0.6) !important;
+}
+
+body.bg-light .navbar {
+    background-color: rgba(240, 242, 245, 0.8) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.02) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.01) !important;
+}

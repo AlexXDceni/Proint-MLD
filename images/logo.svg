@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96">
+  <rect width="360" height="96" rx="16" fill="#e2e8f0" />
+  <circle cx="46" cy="48" r="18" fill="#0f766e" />
+  <text x="78" y="45" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#0f172a">Proint MLD</text>
+  <text x="78" y="69" font-size="12" font-family="Arial, sans-serif" fill="#334155">Web Training and Development</text>
+</svg>
