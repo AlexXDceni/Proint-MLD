@@ -212,12 +212,14 @@ body.bg-dark article.card:hover {
 
  .display-5 {
     background: linear-gradient(90deg, #ffffff, #a5b4fc);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 body.bg-light .display-5 {
     background: linear-gradient(90deg, #0f172a, #334155);
+    background-clip: text;
     -webkit-background-clip: text;
     /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
