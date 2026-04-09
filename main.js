@@ -15,6 +15,7 @@ btn.addEventListener("click", () => {
         sections.forEach(section => {
             section.classList.replace("bg-dark", "bg-light");
             section.classList.replace("text-white", "text-dark");
+            // section.classList.replace("text-white", "text-dark");
         });       
        
 
